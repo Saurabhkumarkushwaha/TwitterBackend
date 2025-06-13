@@ -1,8 +1,8 @@
-const {TweetRespository, HashtagRepository} = require('../repository/index');
+import {TweetRepository, HashtagRepository} from '../repository/index.js';
 
 class TweetService {
     constructor() {
-        this.tweetRepository = new TweetRespository();
+        this.tweetRepository = new TweetRepository();
         this.hashtagRepository = new HashtagRepository();
     }
 
@@ -25,15 +25,15 @@ class TweetService {
          * 2. filter title of hashtag based on multiple tags
          * 3. How to add tweet id inside all the hashtags
          */
-        alreadyPresentTags.forEach((tag) => {
-            tag.tweets.push(tweet.id);
-            tag.save();
-        });
-        return tweet;
+        // alreadyPresentTags.forEach((tag) => {
+        //     tag.tweets.push(tweet.id);
+        //     tag.save();
+        // });
+        // return tweet;
     }
 }
 
-module.exports = TweetService;
+export default TweetService;
 
 /*
   this is #first #tweet . I am really #exited
