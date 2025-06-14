@@ -8,6 +8,6 @@
  router.post('/tweets', createTweet);
 
 
- router.post('/likes/toggle',toggleLike)
+ router.post('/likes/toggle',toggleLike);
 
  export default router;
