@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const likeSchema = new mongoose.Schema({
     onModel: {
@@ -6,14 +6,14 @@ const likeSchema = new mongoose.Schema({
         required: true,
         enum: ['Tweet' , 'Comment']
     },
-    likable: {
+    likeable: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         refPath: 'onModel'
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        red: 'User',
+        ref: 'User',
         required: true
     }
 }, {timestamps: true});
