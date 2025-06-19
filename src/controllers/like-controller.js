@@ -14,7 +14,7 @@ export const toggleLike = async (req, res) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({
-            success: false,
+            success: false,  
             data: {},
             message: 'Something went wrong',
             err: error
