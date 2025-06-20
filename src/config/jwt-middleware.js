@@ -11,7 +11,6 @@ const opts = {
 
 export const passportAuth = (passport) => {
     try {
-        console.log("INSIDE STRTEGY");
         passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
             console.log("req sent to startegy");
             const user = await User.findById(jwt_payload.id);
