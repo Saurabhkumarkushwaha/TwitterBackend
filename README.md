@@ -21,3 +21,5 @@
 -User Auth
 
 -Every Tweet might be having a hashtag
+
+npm install --save-dev jest @babel/plugin-transform-modules-commonjs
